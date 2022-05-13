@@ -17,3 +17,8 @@ body{
   justify-content: center;
   padding-top: 5vh;
 }
+button{
+  background-color: orange;
+  width: 10vh;
+  height: 5vh;
+}
