@@ -1,0 +1,13 @@
+canvas{
+    display: block;
+    margin: auto;
+    padding-top: 15vh;
+}
+body{
+  
+  margin: auto;
+  width: 100vh;
+  height: 100vh;
+  background-image: url("morro.jpg");
+  background-size: cover;
+}
