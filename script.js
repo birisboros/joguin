@@ -10,7 +10,7 @@ canvas.height= 500;
 contx.fillStyle= "black";
 contx.fillRect(0, 0, canvas.width, canvas.height);
 
-setInterval(spawnRate, 1000);
+setInterval(spawnRate, 500);
 function spawnRate() {
     sr= Math.floor(Math.random() * 11);
     return sr;
@@ -131,6 +131,7 @@ imageSrc : "comet002.png",
 framesMax: 4
 })
 
+
 const keys = {
     l: {
         pressed: false
@@ -150,8 +151,9 @@ function anim(){
     contx.fillStyle= "black";
     contx.fillRect(0, 0, canvas.width, canvas.height);
     player1.update();
-    
     player2.update();
+    player2.update();
+    
 
     player1.velo.x= 0;
     
