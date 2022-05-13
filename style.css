@@ -18,7 +18,16 @@ body{
   padding-top: 5vh;
 }
 button{
-  background-color: orange;
-  width: 10vh;
-  height: 5vh;
+  font-size: 2em;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 0 3px #252301, 0 0 5px #4b522a;
+  background: repeating-linear-gradient(
+  45deg,
+  #ccc03e,
+  #ccc03e 10px,
+  #000000 10px,
+  #000000 30px
+);
+  
 }
