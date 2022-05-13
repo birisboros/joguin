@@ -10,7 +10,7 @@ canvas.height= 500;
 contx.fillStyle= "black";
 contx.fillRect(0, 0, canvas.width, canvas.height);
 
-setInterval(spawnRate, 5000);
+setInterval(spawnRate, 1000);
 function spawnRate() {
     sr= Math.floor(Math.random() * 11);
     return sr;
@@ -155,13 +155,14 @@ function anim(){
 
     player1.velo.x= 0;
     
-    if (((player2.position.x + player2.height) || player2.position.y) === 
-    ((player1.position.x + player1.height) || player1.position.y)) {
+    if ((player1.position.y === player2.position.y) && 
+    (player1.position.x === player2.position.x)) {
         
         
         
         console.log("hit")
         player11.update();
+        keys.u.pressed = false;
         player1.velo.x= 0;
         player1.velo.y= 0;
         return
@@ -207,9 +208,20 @@ window.addEventListener("keydown" , (event) => {
             break;
         
         case "ArrowUp":
+            if ((player1.position.y === player2.position.y) && 
+            (player1.position.x === player2.position.x)) {
+        
+        
+        
+                keys.u.pressed = false;
+              
+                return
+            }
             if (player1.position.y >50) {
                 player1.velo.y= -10;
             }
+            
+            keys.u.pressed = true;
             
             break;
     
