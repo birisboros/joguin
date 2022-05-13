@@ -154,11 +154,14 @@ function anim(){
     player2.update();
     player2.update();
     
+    
 
     player1.velo.x= 0;
     
-    if ((player1.position.y === player2.position.y) && 
-    (player1.position.x === player2.position.x)) {
+    if (player1.position.x < player2.position.x + 25 &&
+        player1.position.x + 25 > player2.position.x &&
+        player1.position.y < player2.position.y + 25 &&
+        player1.position.y + 25 > player2.position.y) {
         
         
         
