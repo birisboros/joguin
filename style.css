@@ -1,13 +1,19 @@
 canvas{
     display: block;
     margin: auto;
-    padding-top: 15vh;
+    padding-top: 12vh;
 }
 body{
   
   margin: auto;
   width: 100vh;
   height: 100vh;
-  background-image: url("morro.jpg");
+  background-image: url("cogus001.webp");
   background-size: cover;
+}
+#botao{
+  display: flex;
+  width: 100vh;
+  justify-content: center;
+  padding-top: 5vh;
 }
