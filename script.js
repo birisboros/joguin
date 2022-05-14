@@ -5,18 +5,18 @@ var tID;
 var sr;
 var sr2;
 let cara = "sprite0002.png";
-var pontosganhos = 1;
-var pontuacao = 0;
+var temporisador = 0;
+var pontuacao = -1;
 var pontos= 0;
 
 function score() {
-        if (pontosganhos === pontuacao){
+        if (temporisador === pontuacao){
                 document.getElementById("score").innerHTML = "SCORE :" + " " + " " + pontos;
             }
         else  {
-                document.getElementById("time").innerHTML = "TEMPO :" + " " + pontosganhos + "s";
+                document.getElementById("time").innerHTML = "TEMPO :" + " " + temporisador + "s";
                 document.getElementById("score").innerHTML = "SCORE :" + " " + " " + pontos;
-                return pontos = pontos + 100;
+                return pontos = pontos + 125;
             }
 }
 canvas.width= 500;
@@ -40,7 +40,7 @@ spawnRate2();
 
 setInterval(spawnRate3, 1000);
 function spawnRate3() {
-    pontosganhos ++ ;
+    temporisador ++ ;
     score();
     
 }
@@ -206,7 +206,7 @@ function anim(){
         player1.position.y + 25 > player2.position.y) {
         
         
-        pontuacao = pontosganhos + 1;
+        pontuacao = temporisador + 1;
         console.log("hit")
         player11.update();
         keys.u.pressed = false;
@@ -220,7 +220,7 @@ function anim(){
         player1.position.y + 25 > player3.position.y) {
         
         
-        pontuacao = pontosganhos + 1;
+        pontuacao = temporisador + 1;
         console.log("hit")
         player11.update();
         keys.u.pressed = false;
