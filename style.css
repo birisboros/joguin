@@ -91,24 +91,24 @@ button{
 }
 @media (max-width:510px) {
   body{
-    width: fit-content;
+    width: 100vw;
     margin: 0;
     overflow: hidden;
     padding: 0;
   }
   canvas{
-    width: fit-content;
+    width: 100vw;
     margin: 0;
     padding: 0;
   }
   #score, #time, #botao, #placar, #placar2{
-    width: fit-content;
+    width: 100vw;
     margin: 0;
     padding: 1;
   }
   #botao2{
    
-    width: fit-content;
+    width: 100vw;
     margin: 0;
     display: flex;
     justify-content: center;

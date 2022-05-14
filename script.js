@@ -46,6 +46,35 @@ function spawnRate3() {
 }
 spawnRate3();
 
+function movsMobileLeft(){
+    
+        player1.velo.x= -10; 
+        if (player1.position.x === 0) {
+         player1.velo.x= 10;
+         
+         }
+         
+     }
+     
+
+function movsMobileRight(){
+    
+     
+         player1.velo.x= 10; 
+         if (player1.position.x === (canvas.width - player1.width)) {
+             player1.velo.x= -10;
+         }
+         
+     
+    
+}
+function movsMobileUp(){
+  
+     if (player1.position.y >50) {
+        player1.velo.y= -5;
+    }
+}
+
 class  Personagem{
     constructor({position, velo, framesMax =1,imageSrc}){
         this.position = position;
@@ -212,6 +241,7 @@ function anim(){
         keys.u.pressed = false;
         player1.velo.x= 0;
         player1.velo.y= 0;
+        document.getElementById("botao2").style= "visibility: hidden;"
         return
     }
     if (player1.position.x < player3.position.x + 25 &&
@@ -226,6 +256,7 @@ function anim(){
         keys.u.pressed = false;
         player1.velo.x= 0;
         player1.velo.y= 0;
+        document.getElementById("botao2").style= "visibility: hidden;"
         return
     }
 
