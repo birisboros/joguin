@@ -118,7 +118,7 @@ class  Personagem{
 
 const player1 = new Personagem({
     position:{
-    x: 10,
+    x: 200,
     y: 400
 },
     velo:{
@@ -167,7 +167,7 @@ const player3 = new Personagem({
     x:0,
     y:0
 },
-imageSrc : "explos.png",
+imageSrc : "explos3.png",
 framesMax: 4
 })
 
@@ -204,6 +204,20 @@ function anim(){
         player1.position.x + 25 > player2.position.x &&
         player1.position.y < player2.position.y + 25 &&
         player1.position.y + 25 > player2.position.y) {
+        
+        
+        pontuacao = pontosganhos + 1;
+        console.log("hit")
+        player11.update();
+        keys.u.pressed = false;
+        player1.velo.x= 0;
+        player1.velo.y= 0;
+        return
+    }
+    if (player1.position.x < player3.position.x + 25 &&
+        player1.position.x + 25 > player3.position.x &&
+        player1.position.y < player3.position.y + 25 &&
+        player1.position.y + 25 > player3.position.y) {
         
         
         pontuacao = pontosganhos + 1;
@@ -270,7 +284,7 @@ window.addEventListener("keydown" , (event) => {
                 return
             }
             if (player1.position.y >50) {
-                player1.velo.y= -10;
+                player1.velo.y= -3;
             }
             
             keys.u.pressed = true;
