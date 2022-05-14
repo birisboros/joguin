@@ -1,7 +1,7 @@
 canvas{
     display: block;
     margin: auto;
-    padding-top: 12vh;
+    padding-top: 5vh;
 }
 body{
   
@@ -10,6 +10,61 @@ body{
   height: 100vh;
   background-image: url("cogus001.webp");
   background-size: cover;
+}
+#placar{
+  position: relative;
+  display: flex;
+  width: 100vh;
+  height: auto;
+  justify-content: center;
+  padding-top: 2vh;
+}
+#placar2{
+  position: relative;
+  display: flex;
+  width: 100vh;
+  height: auto;
+  justify-content: center;
+  padding-top: 2vh;
+}
+#score{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 2vh;
+  width: 30vw;
+  height: 5vh;
+  font-size: 2em;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 0 3px #252301, 0 0 5px #4b522a;
+  background: repeating-linear-gradient(
+  45deg,
+  #736c23,
+  #736c23 10px,
+  #000000 10px,
+  #000000 30px
+);
+  
+}
+#time{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15vw;
+  height: 5vh;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fab8b8;
+  text-shadow: 0 0 3px #252301, 0 0 5px #4b522a;
+  background: repeating-linear-gradient(
+  45deg,
+  #736c23,
+  #736c23 10px,
+  #000000 10px,
+  #000000 30px
+);
+  
 }
 #botao{
   display: flex;
@@ -24,8 +79,8 @@ button{
   text-shadow: 0 0 3px #252301, 0 0 5px #4b522a;
   background: repeating-linear-gradient(
   45deg,
-  #ccc03e,
-  #ccc03e 10px,
+  #736c23,
+  #736c23 10px,
   #000000 10px,
   #000000 30px
 );

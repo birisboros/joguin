@@ -5,7 +5,20 @@ var tID;
 var sr;
 var sr2;
 let cara = "sprite0002.png";
+var pontosganhos = 1;
+var pontuacao = 0;
+var pontos= 1;
 
+function score() {
+        if (pontosganhos === pontuacao){
+                document.getElementById("score").innerHTML = "SCORE :" + " " + " " + pontos;
+            }
+        else  {
+                document.getElementById("time").innerHTML = "TEMPO :" + " " + pontosganhos + "s";
+                document.getElementById("score").innerHTML = "SCORE :" + " " + " " + pontos;
+                return pontos += pontos + 10;
+            }
+}
 canvas.width= 500;
 canvas.height= 500;
 
@@ -25,6 +38,13 @@ function spawnRate2() {
 }
 spawnRate2();
 
+setInterval(spawnRate3, 1000);
+function spawnRate3() {
+    pontosganhos ++ ;
+    score();
+    
+}
+spawnRate3();
 
 class  Personagem{
     constructor({position, velo, framesMax =1,imageSrc}){
@@ -186,7 +206,7 @@ function anim(){
         player1.position.y + 25 > player2.position.y) {
         
         
-        
+        pontuacao = pontosganhos + 1;
         console.log("hit")
         player11.update();
         keys.u.pressed = false;
