@@ -7,7 +7,7 @@ var sr2;
 let cara = "sprite0002.png";
 var pontosganhos = 1;
 var pontuacao = 0;
-var pontos= 1;
+var pontos= 0;
 
 function score() {
         if (pontosganhos === pontuacao){
@@ -16,7 +16,7 @@ function score() {
         else  {
                 document.getElementById("time").innerHTML = "TEMPO :" + " " + pontosganhos + "s";
                 document.getElementById("score").innerHTML = "SCORE :" + " " + " " + pontos;
-                return pontos += pontos + 10;
+                return pontos = pontos + 100;
             }
 }
 canvas.width= 500;
