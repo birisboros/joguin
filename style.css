@@ -91,13 +91,13 @@ button{
 }
 @media (max-width:510px) {
   body{
-    width: 500px;
+    width: fit-content;
     margin: 0;
     overflow: hidden;
     padding: 0;
   }
   canvas{
-    
+    width: fit-content;
     margin: 0;
     padding: 0;
   }
@@ -108,7 +108,7 @@ button{
   }
   #botao2{
    
-    width: 500px;
+    width: fit-content;
     margin: 0;
     display: flex;
     justify-content: center;
