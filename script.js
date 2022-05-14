@@ -10,7 +10,7 @@ canvas.height= 500;
 contx.fillStyle= "black";
 contx.fillRect(0, 0, canvas.width, canvas.height);
 
-setInterval(spawnRate, 500);
+setInterval(spawnRate, 200);
 function spawnRate() {
     sr= Math.floor(Math.random() * 11);
     return sr;
@@ -153,6 +153,8 @@ function anim(){
     player1.update();
     player2.update();
     player2.update();
+    player2.update();
+   
     
     
 
