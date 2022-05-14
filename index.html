@@ -24,9 +24,14 @@
     <canvas></canvas>
     </div>
     
-    <div id="botao">
-    <button onclick="location.reload()">RESET ↵</button>
+    <div id="botao2">
+    <button onclick="player1.velo.x=-5">LEFT</button>
+    <button onclick="player1.velo.y=-3">UP</button>
+    <button onclick="player1.velo.x=5">RIGHT</button>
     </div>
+    <div id="botao">
+        <button id="reset" onclick="location.reload()">RESET ↵</button>
+        </div>
     
     <script src="script.js"></script>
     

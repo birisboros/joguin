@@ -84,5 +84,46 @@ button{
   #000000 10px,
   #000000 30px
 );
-  
+
+}
+#botao2 {
+  display: none;
+}
+@media (max-width:510px) {
+  body{
+    width: 500px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+  canvas{
+    
+    margin: 0;
+    padding: 0;
+  }
+  #score, #time, #botao, #placar, #placar2{
+    width: 500px;
+    margin: 0;
+    padding: 1;
+  }
+  #botao2{
+   
+    width: 500px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 1vh;
+    
+
+  }
+  #botao{
+    padding-top: 2vh;
+  }
+  button{
+    width: 30vw;
+  }
+  #reset{
+    font-size: 1em;
+    width: auto;
+  }
 }
