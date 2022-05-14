@@ -1,3 +1,11 @@
+body{
+  font-family: 'Brush Script MT', cursive;
+  margin: auto;
+  width: 100vh;
+  height: 100vh;
+  background-image: url("cogus001.webp");
+  background-size: cover;
+}
 #gameover{
   position: absolute;
   display: none;
@@ -14,14 +22,7 @@ canvas{
     margin: auto;
     padding-top: 5vh;
 }
-body{
-  
-  margin: auto;
-  width: 100vh;
-  height: 100vh;
-  background-image: url("cogus001.webp");
-  background-size: cover;
-}
+
 #placar{
   position: relative;
   display: flex;
