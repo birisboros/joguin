@@ -290,7 +290,10 @@ window.addEventListener("keydown" , (event) => {
             keys.u.pressed = true;
             
             break;
-    
+            
+        case "Enter":
+            location.reload();
+            break;
        
     }
 })
