@@ -242,6 +242,7 @@ function anim(){
         player1.velo.x= 0;
         player1.velo.y= 0;
         document.getElementById("botao2").style= "visibility: hidden;"
+        document.getElementById("gameover").style= "display: flex;"
         return
     }
     if (player1.position.x < player3.position.x + 25 &&
@@ -257,6 +258,7 @@ function anim(){
         player1.velo.x= 0;
         player1.velo.y= 0;
         document.getElementById("botao2").style= "visibility: hidden;"
+        document.getElementById("gameover").style= "display: flex;"
         return
     }
 

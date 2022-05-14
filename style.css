@@ -1,3 +1,14 @@
+#gameover{
+  position: absolute;
+  display: none;
+  justify-content: center;
+  padding-top: 30vh;
+  width: 100vh;
+  height: auto;
+  font-size: 3em;
+  color: #fc1c1c;
+  
+}
 canvas{
     display: block;
     margin: auto;
@@ -95,6 +106,11 @@ button{
     margin: 0;
     overflow: hidden;
     padding: 0;
+  }
+  #gameover{
+    width: 100%;
+    font-size: 2em;
+    
   }
   canvas{
     width: 100vw;
