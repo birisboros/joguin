@@ -3,11 +3,12 @@ const contx= canvas.getContext('2d');
 const gforce= 0.5;
 var tID;
 var sr;
+var sr2;
 let cara = "sprite0002.png";
 
 canvas.width= 500;
 canvas.height= 500;
-contx.fillStyle= "black";
+
 contx.fillRect(0, 0, canvas.width, canvas.height);
 
 setInterval(spawnRate, 200);
@@ -17,6 +18,12 @@ function spawnRate() {
 }
 spawnRate();
 
+setInterval(spawnRate2, 100);
+function spawnRate2() {
+    sr2= Math.floor(Math.random() * 11);
+    return sr2;
+}
+spawnRate2();
 
 
 class  Personagem{
@@ -131,6 +138,19 @@ imageSrc : "comet002.png",
 framesMax: 4
 })
 
+const player3 = new Personagem({
+    position:{
+    x: sr2 * 50,
+    y: 10
+},
+    velo:{
+    x:0,
+    y:0
+},
+imageSrc : "explos.png",
+framesMax: 4
+})
+
 
 const keys = {
     l: {
@@ -154,7 +174,7 @@ function anim(){
     player2.update();
     player2.update();
     player2.update();
-   
+    player3.update();
     
     
 
@@ -194,6 +214,11 @@ function anim(){
     if (player2.position.y === 450) {
         player2.position.y = 0;
         player2.position.x = sr *50;
+       
+    }
+    if (player3.position.y === 450) {
+        player3.position.y = 0;
+        player3.position.x = sr2 *50;
        
     }
     
