@@ -49,7 +49,7 @@ body{
   justify-content: left;
   align-items: center;
   padding-left: 2vh;
-  width: 30vw;
+  width: 15em;
   height: 5vh;
   font-size: 2em;
   font-weight: bold;
@@ -62,13 +62,15 @@ body{
   #000000 10px,
   #000000 30px
 );
-  
+border-style: outset;
+border-width: 2px;
+border-color: rgb(118, 118, 118); 
 }
 #time{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 15vw;
+  width: 12em;
   height: 5vh;
   font-size: 1.5em;
   font-weight: bold;
@@ -81,7 +83,10 @@ body{
   #000000 10px,
   #000000 30px
 );
-  
+border-style: outset;
+border-width: 2px;
+border-color: rgb(118, 118, 118);
+   
 }
 #botao{
   display: flex;
