@@ -49,9 +49,9 @@ function spawnRate2() {
 
 function movsMobileLeft(){
     
-        player1.velo.x= -20; 
+        player1.velo.x= -30; 
         if (player1.position.x === 0) {
-         player1.velo.x= 20;
+         player1.velo.x= 30;
          
          }
          
@@ -61,9 +61,9 @@ function movsMobileLeft(){
 function movsMobileRight(){
     
      
-         player1.velo.x= 20; 
+         player1.velo.x= 30; 
          if (player1.position.x === (canvas.width - player1.width)) {
-             player1.velo.x= -20;
+             player1.velo.x= -30;
          }
          
      
