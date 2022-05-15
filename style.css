@@ -15,7 +15,9 @@
   color: #fc1c1c;
   
 }
-
+#canvDiv{
+  padding-top:1vh;
+}
 canvas{
     
     display: block;
@@ -130,8 +132,10 @@ button{
   #playbut{
     width: auto;
     font-size: 1em;
-    
-  }
+    }
+  #canvDiv{
+      padding-top:0;
+    }
   #gameover{
     width: 100%;
     font-size: 2em;
