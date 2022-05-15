@@ -1,11 +1,9 @@
-body{
-  font-family: 'Brush Script MT', Arial;
-  margin: auto;
-  width: 100vh;
-  height: 100vh;
-  background-image: url("cogus001.webp");
-  background-size: cover;
-}
+#playb{
+    display: flex;
+    width: 100vh;
+    justify-content: center;
+    padding-top: 5vh;
+  }
 #gameover{
   position: absolute;
   display: none;
@@ -22,7 +20,14 @@ canvas{
     margin: auto;
     padding-top: 5vh;
 }
-
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+  width: 100vh;
+  height: 100vh;
+  background-image: url("cogus001.webp");
+  background-size: cover;
+}
 #placar{
   position: relative;
   display: flex;
@@ -101,12 +106,21 @@ button{
 #botao2 {
   display: none;
 }
+#reset{
+  display: none;
+}
+
 @media (max-width:510px) {
   body{
     width: 100vw;
     margin: 0;
     overflow: hidden;
     padding: 0;
+  }
+  #playbut{
+    width: auto;
+    font-size: 1em;
+    
   }
   #gameover{
     width: 100%;
@@ -135,6 +149,10 @@ button{
   }
   #botao{
     padding-top: 2vh;
+  }
+  #playb{
+    padding-top: 2vh;
+    width: auto;
   }
   button{
     width: 30vw;

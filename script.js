@@ -29,28 +29,29 @@ function spawnRate() {
     sr= Math.floor(Math.random() * 11);
     return sr;
 }
-spawnRate();
+
 
 setInterval(spawnRate2, 100);
 function spawnRate2() {
     sr2= Math.floor(Math.random() * 11);
     return sr2;
 }
-spawnRate2();
 
-setInterval(spawnRate3, 1000);
-function spawnRate3() {
-    temporisador ++ ;
-    score();
-    
-}
-spawnRate3();
+
+
+     function spawnRate3() {
+        temporisador ++ ;
+        score();
+        
+        return temporisador;
+        }
+
 
 function movsMobileLeft(){
     
-        player1.velo.x= -20; 
+        player1.velo.x= -10; 
         if (player1.position.x === 0) {
-         player1.velo.x= 20;
+         player1.velo.x= 10;
          
          }
          
@@ -60,9 +61,9 @@ function movsMobileLeft(){
 function movsMobileRight(){
     
      
-         player1.velo.x= 20; 
+         player1.velo.x= 10; 
          if (player1.position.x === (canvas.width - player1.width)) {
-             player1.velo.x= -20;
+             player1.velo.x= -10;
          }
          
      
@@ -212,13 +213,35 @@ const keys = {
         pressed: false
     }
 }
+
 let lastkey
 
+var pla = 0;
+
+
+function playb(){
+    pla ++;
+    
+    document.getElementById("playb").style= "display: none;"
+    setInterval(spawnRate3, 1000);
+    document.getElementById("reset").style= "display: block;"
+    return pla;
+    
+
+}
+
+
+    
+    
+
 function anim(){
+    
+        
     
     window.requestAnimationFrame(anim);
     contx.fillStyle= "black";
     contx.fillRect(0, 0, canvas.width, canvas.height);
+    if (pla === 1 || pla === 2) {
     player1.update();
     player2.update();
     player2.update();
@@ -292,7 +315,9 @@ function anim(){
     
     
 }
-anim();
+}
+
+anim()
 
 window.addEventListener("keydown" , (event) => {
     switch (event.key) {
@@ -325,7 +350,15 @@ window.addEventListener("keydown" , (event) => {
             break;
             
         case "Enter":
-            location.reload();
+            setInterval(spawnRate3, 1000);
+            pla++;
+            document.getElementById("playb").style= "display: none;"
+            document.getElementById("reset").style= "display: block;"
+            if (pla===2) {
+                location.reload();
+                
+            }
+            
             break;
        
     }
