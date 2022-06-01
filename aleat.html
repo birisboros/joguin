@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleatorizando</title>
+    <style>
+        body{
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 106, 0);
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+            margin: auto;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #resp{
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 3em;
+        }
+        #resul2{
+            height: 20vh;
+            font-size: 4em;
+        }
+       
+        button{
+            
+            font-size: 2em;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 0 0 3px #252301, 0 0 5px #4b522a;
+            background: repeating-linear-gradient(
+            45deg,
+            #736c23,
+            #736c23 10px,
+            #000000 10px,
+            #000000 30px
+            );
+        }
+    </style>
+</head>
+<body onload="aleat()">
+ 
+    <div>
+        
+        <button onclick="location.reload()">ALEATORIZAR</button>
+
+    </div>
+
+    <div id="resp">
+
+        <div id="resul2"></div>
+
+    </div>
+
+<script>
+    var con2=[];
+    var caracteres = 8;
+    function aleat() {
+       let oii = Math.floor((Math.random() * caracteres)+2)
+       console.log(oii)
+        for (let i = 0; i < oii; i++) {
+            nova();
+            
+        }
+        
+        document.getElementById("resul2").innerHTML= con2.join("");
+       
+    }
+    
+    function nova(){
+        const consoa = ["B" , "C" , "D" , "A" , "E" , "I" , "O" , "U" , "Y",  "F" , "G" , "H" ,
+         "J" , "A" , "E" , "I" , "O" , "U" , "Y", "K" , "L" , "M" , "N", "P" , "Q" , "A" , "E" ,
+          "I" , "O" , "U" , "Y", "R" , "S" , "T" , "A" , "E" , "I" , "O" , "U" , "Y", "V" , "X" ,
+           "Z"];
+        var rand2 = Math.floor(Math.random() * 43);
+        con2.push(consoa[rand2]);
+        console.log(con2)
+        console.log(rand2)
+    }
+</script>
+
+</body>
+</html>
